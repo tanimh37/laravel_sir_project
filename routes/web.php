@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 // admin dashboard
-Route::get('/admin/dashboard', function () {
-    return view('backend.admin_dashboard');
-})->middleware(['auth:admin',])->name('admin_dashboard');
+// Route::get('/admin/dashboard', function () {
+//     return view('backend.admin_dashboard');
+// })->middleware(['auth:admin',])->name('admin_dashboard');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -34,6 +34,8 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+// admin Routes
+
 Route::middleware('guest:admin')->prefix('admin')->group( function () {
 
     Route::get('login', [App\Http\Controllers\Auth\Admin\LoginController::class, 'login'])->name('admin.login');
@@ -46,6 +48,25 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
 
     Route::post('logout', [App\Http\Controllers\Auth\Admin\LoginController::class, 'logout'])->name('admin.logout');
 
-    Route::view('admin/dashboard','backend.admin_dashboard');
+    Route::view('/dashboard','backend.admin_dashboard');
 
 });
+
+// Doctor Routes
+
+Route::middleware('guest:doctor')->prefix('doctor')->group( function () {
+
+    Route::get('login', [App\Http\Controllers\Auth\Doctor\LoginController::class, 'login'])->name('doctor.login');
+    Route::post('login', [App\Http\Controllers\Auth\Doctor\LoginController::class, 'check_user']);
+
+
+});
+
+Route::middleware('auth:doctor')->prefix('doctor')->group( function () {
+
+    Route::post('logout', [App\Http\Controllers\Auth\Doctor\LoginController::class, 'logout'])->name('doctor.logout');
+
+    Route::view('/dashboard','backend.doctor_dashboard');
+
+});
+

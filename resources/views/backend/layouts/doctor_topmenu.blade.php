@@ -1,4 +1,4 @@
-Admin Top Menu
+Doctor Top Menu
 <nav class="navbar navbar-inverse navbar-fixed-top">
 				<a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block mr-20 pull-left" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
 				<a href="index.html"><img class="brand-img pull-left" src="{{asset('dist/img/logo.png')}}" alt="brand"/></a>
@@ -144,7 +144,7 @@ Admin Top Menu
 							</li>
 							<li class="divider"></li>
 							<li>
-                                <form action="{{route('admin.logout')}}" method="post">
+                                <form action="{{route('doctor.logout')}}" method="post">
                                     @csrf
                                     <button type="submit" class="fa fa-fw fa-power-off">Logout</button>
                                     </form>

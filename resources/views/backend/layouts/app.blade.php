@@ -16,11 +16,22 @@
 
     <div class="wrapper">
         <!-- Top Menu Items -->
-        @include('backend.layouts.topmenu')
+         @if (Auth()->guard('admin')->check())
+         @include('backend.layouts.topmenu')
+         @elseif(Auth()->guard('doctor')->check())
+         @include('backend.layouts.doctor_topmenu')
+         @endif
+
         <!-- /Top Menu Items -->
 
         <!-- Left Sidebar Menu -->
-        @include('backend.layouts.leftsidebar')
+        @if (Auth()->guard('admin')->check())
+         @include('backend.layouts.leftsidebar')
+         @elseif(Auth()->guard('doctor')->check())
+         @include('backend.layouts.doctor_leftsidebar')
+         @endif
+
+
         <!-- /Left Sidebar Menu -->
 
         <!-- Right Sidebar Menu -->

@@ -134,7 +134,7 @@
                         <div class="panel panel-default card-view">
                             <div class="panel-heading">
 
-                                <div>Admin Dashboard</div>
+                                <div>Doctor Dashboard</div>
                             </div>
                             <div class="panel-wrapper collapse in">
                                 <div class="panel-body">
@@ -155,3 +155,4 @@
             </div>
 
 @endsection
+

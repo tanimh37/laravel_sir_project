@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Admin extends Authenticatable
+class Doctor extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -18,11 +18,11 @@ class Admin extends Authenticatable
      * @var array<int, string>
      */
 
-     protected $guard = 'admin';
+     protected $guard = 'doctor';
     protected $fillable = [
         'name',
         'email',
-        'password',
+        'password'
     ];
 
     /**
@@ -45,4 +45,5 @@ class Admin extends Authenticatable
         'password' => 'hashed',
     ];
 }
+
 
