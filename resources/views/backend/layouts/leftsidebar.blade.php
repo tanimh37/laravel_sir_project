@@ -11,7 +11,21 @@
 								<a href="{{route('specialist.index')}}">All Specialists</a>
 							</li>
 							<li>
-								<a href="product.html">New Specialists</a>
+								<a href="{{route('specialist.create')}}">New Specialists</a>
+							</li>
+							<li>
+
+						</ul>
+					</li>
+
+                    <li>
+						<a href="javascript:void(0);" data-toggle="collapse" data-target="#dr_list"><i class="icon-basket-loaded mr-10"></i>Doctor<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
+						<ul id="dr_list" class="collapse collapse-level-1">
+							<li>
+								<a href="{{route('specialist.index')}}">All Doctor</a>
+							</li>
+							<li>
+								<a href="{{route('specialist.create')}}">New Doctor</a>
 							</li>
 							<li>
 

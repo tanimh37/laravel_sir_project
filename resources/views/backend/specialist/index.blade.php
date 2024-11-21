@@ -35,6 +35,7 @@
     <!-- Title -->
     <div class="row heading-bg bg-green">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+
             <h5 class="txt-light">Export</h5>
         </div>
         <!-- Breadcrumb -->
@@ -55,6 +56,10 @@
             <div class="panel panel-default card-view">
                 <div class="panel-heading">
                     <div class="pull-left">
+                        @if(session('msg'))
+                        <div class="alert alert-success">{{session('msg')}}</div>
+
+                        @endif
                         <h6 class="panel-title txt-dark">Export</h6>
                     </div>
                     <div class="clearfix"></div>
@@ -88,7 +93,16 @@
                                             <td>{{$loop->iteration}}</td>
                                             <td>{{$item->name}}Accountant</td>
                                             <td>{{$item->details}}</td>
-                                            <td>Edit|Delete</td>
+                                            <td>
+                                                <a href="{{route('specialist.edit',$item->id)}}" class="btn btn-danger">Edit</a>
+
+                                                <form action="{{route('specialist.destroy',$item->id)}}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+
+                                                    <button type="submit" class="btn btn-danger" name="submit"> Delete</button>
+                                                </form>
+                                            </td>
 
                                         </tr>
                                         @endforeach ()
