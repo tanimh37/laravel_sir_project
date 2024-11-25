@@ -66,14 +66,35 @@
 										<div class="row">
 											<div class="col-sm-12 col-xs-12">
 												<div class="form-wrap">
+													<form class="form-horizontal" method="post" action="{{route('specialist.update',$specialist->id)}}">
+                                                        @csrf
+                                                        @method('PUT')
+														<div class="form-group">
+															<label for="exampleInputuname_4" class="col-sm-3 control-label">Specialist Name*</label>
+															<div class="col-sm-9">
+																<div class="input-group">
+																	<input type="text" name="specialist" value="{{$specialist->name}}" class="form-control" id="exampleInputuname_4" placeholder="Specialist User">
+																	<div class="input-group-addon"><i class="icon-user"></i></div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group">
+															<label for="exampleInputEmail_4" class="col-sm-3 control-label">New Specialist*</label>
+															<div class="col-sm-9">
+																<div class="input-group">
+																	<textarea name="details" class="form-control" id="exampleInputEmail_4" placeholder="Enter Details">{{$specialist->details}}</textarea>
+																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
+																</div>
+															</div>
+														</div>
 
-                                                
-<h1>{{$specalist->id}}</h1>
-<h1>{{$specalist->name}}</h1>
-<h1>{{$specalist->details}}</h1>
+                                                        <div class="form-group mb-0">
+															<div class="col-sm-offset-3 col-sm-9">
+																<button type="submit" class="btn btn-info ">Update</button>
+															</div>
+														</div>
 
-
-
+													</form>
 												</div>
 											</div>
 										</div>

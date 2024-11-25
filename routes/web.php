@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\backend\DoctorController;
 use App\Http\Controllers\backend\SpecialistController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Doctor;
 use App\Models\Specialist;
 use Illuminate\Support\Facades\Route;
 
@@ -52,6 +54,7 @@ Route::middleware('auth:admin')->prefix('admin')->group( function () {
 
     Route::view('/dashboard','backend.admin_dashboard');
     Route::resource('/specialist',SpecialistController::class);
+    Route::resource('/doctor',DoctorController::class);
 
 });
 
@@ -70,6 +73,8 @@ Route::middleware('auth:doctor')->prefix('doctor')->group( function () {
     Route::post('logout', [App\Http\Controllers\Auth\Doctor\LoginController::class, 'logout'])->name('doctor.logout');
 
     Route::view('/dashboard','backend.doctor_dashboard');
+
+    // Route::view('/content1','backend.content1_dashboard');
 
 });
 

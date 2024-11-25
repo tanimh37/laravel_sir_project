@@ -72,7 +72,8 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Specialist Name</th>
+                                            <th>Doctor Name</th>
+                                            <th>Speciality</th>
                                             <th>Deatils</th>
                                             <th>Action</th>
 
@@ -81,7 +82,8 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Specialist Name</th>
+                                            <th>Doctor Name</th>
+                                            <th>Speciality</th>
                                             <th>Deatils</th>
                                             <th>Action</th>
                                         </tr>
