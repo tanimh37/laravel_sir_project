@@ -67,7 +67,6 @@
 											<div class="col-sm-12 col-xs-12">
 												<div class="form-wrap">
 
-                                                
 <h1>{{$specalist->id}}</h1>
 <h1>{{$specalist->name}}</h1>
 <h1>{{$specalist->details}}</h1>

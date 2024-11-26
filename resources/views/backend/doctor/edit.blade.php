@@ -41,8 +41,8 @@
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
                 <li><a href="index.html">Dashboard</a></li>
-                <li><a href="#"><span>table</span></a></li>
-                <li class="active"><span>Export</span></li>
+                <li><a href="#"><span>Doctor</span></a></li>
+                <li class="active"><span>Edit</span></li>
             </ol>
         </div>
         <!-- /Breadcrumb -->
@@ -66,35 +66,101 @@
 										<div class="row">
 											<div class="col-sm-12 col-xs-12">
 												<div class="form-wrap">
-													<form class="form-horizontal" method="post" action="{{route('specialist.update',$specialist->id)}}">
-                                                        @csrf
-                                                        @method('PUT')
-														<div class="form-group">
-															<label for="exampleInputuname_4" class="col-sm-3 control-label">Specialist Name*</label>
-															<div class="col-sm-9">
-																<div class="input-group">
-																	<input type="text" name="specialist" value="{{$specialist->name}}" class="form-control" id="exampleInputuname_4" placeholder="Specialist User">
-																	<div class="input-group-addon"><i class="icon-user"></i></div>
-																</div>
-															</div>
-														</div>
-														<div class="form-group">
-															<label for="exampleInputEmail_4" class="col-sm-3 control-label">New Specialist*</label>
-															<div class="col-sm-9">
-																<div class="input-group">
-																	<textarea name="details" class="form-control" id="exampleInputEmail_4" placeholder="Enter Details">{{$specialist->details}}</textarea>
-																	<div class="input-group-addon"><i class="icon-envelope-open"></i></div>
-																</div>
-															</div>
-														</div>
+                                                <form class="form-horizontal" method="post" action="{{route('doctor.update',$doctor->id)}}" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('PUT')
+                                        <div class="form-group">
+                                            <label for="exampleInputuname_4" class="col-sm-3 control-label">Doctor Name*</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <input type="text" name="name" value="{{old('name')??$doctor->name}}" class="form-control" id="exampleInputuname_4" placeholder="Specialist User">
+                                                    @error('name')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                                        <div class="form-group mb-0">
-															<div class="col-sm-offset-3 col-sm-9">
-																<button type="submit" class="btn btn-info ">Update</button>
-															</div>
-														</div>
+                                        <div class="form-group">
+                                            <label for="exampleInputuname_4" class="col-sm-3 control-label">Specialist*</label>
+                                            <div class="col-sm-9">
 
-													</form>
+                                                <select name="specialist" id="">
+                                                    @foreach ( $specialists as $specialist)
+                                                    <option value="{{$specialist->id}}"@selected(old('specialist')??$doctor->specialist_id==$specialist->id)>{{$specialist->name}}Select One</option>
+
+
+
+                                                    @endforeach
+
+                                                </select>
+
+
+
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="exampleInputuname_4" class="col-sm-3 control-label">Email*</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <input type="text" name="email" value="{{old('email')??$doctor->email}}" class="form-control" id="exampleInputuname_4" placeholder="Doctor Email">
+                                                    @error('email')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
+                                                    <div class="input-group-addon"><i class="icon-user"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="form-group">
+                                            <label for="exampleInputuname_4" class="col-sm-3 control-label">Photo*</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <input type="file" name="photo" class="form-control" id="exampleInputuname_4" placeholder="Doctor Picture">
+
+                                                    <div class="input-group-addon"><i class="icon-picture"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group ">
+                                            <label for="exampleInputEmail_4" class="col-sm-3 control-label">Status*</label>
+                                            <div class="col-sm-9">
+                                                <div class="radio radio-info">
+                                                    <input type="radio" name="status" id="radio1" value="active" @if(old('status')=='active') checked @elseif($doctor->status =='active')checked @endif>
+                                                    <label for="radio1">
+                                                        Active
+                                                    </label>
+                                                </div>
+                                                <div class="radio radio-info">
+                                                    <input type="radio" name="status" id="radio2" value="inactive" @if(old('status')=='inactive') checked @elseif($doctor->status =='inactive')checked @endif>
+                                                    <label for="radio2">
+                                                        Inactive
+                                                    </label>
+                                                    @error('status')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="form-group mb-0">
+                                            <div class="col-sm-offset-3 col-sm-9">
+                                                <button type="submit" class="btn btn-info ">Submit</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
 												</div>
 											</div>
 										</div>

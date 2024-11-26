@@ -73,7 +73,9 @@
                                             <div class="col-sm-9">
                                                 <div class="input-group">
                                                     <input type="text" name="name" value="{{old('name')}}" class="form-control" id="exampleInputuname_4" placeholder="Specialist User">
-                                                    <div class="input-group-addon"><i class="icon-user"></i></div>
+                                                    @error('name')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -104,6 +106,9 @@
                                             <div class="col-sm-9">
                                                 <div class="input-group">
                                                     <input type="text" name="email" value="{{old('email')}}" class="form-control" id="exampleInputuname_4" placeholder="Doctor Email">
+                                                    @error('email')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
                                                     <div class="input-group-addon"><i class="icon-user"></i></div>
                                                 </div>
                                             </div>
@@ -115,6 +120,9 @@
                                             <div class="col-sm-9">
                                                 <div class="input-group">
                                                     <input type="password" name="password" class="form-control" id="exampleInputuname_4" placeholder="Doctor Password">
+                                                    @error('password')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
                                                     <div class="input-group-addon"><i class="icon-user"></i></div>
                                                 </div>
                                             </div>
@@ -125,6 +133,11 @@
                                             <div class="col-sm-9">
                                                 <div class="input-group">
                                                     <input type="password" name="password_confirmation" class="form-control" id="exampleInputuname_4" placeholder="Doctor Re-Password">
+
+                                                    @error('password_confirmation')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
+
                                                     <div class="input-group-addon"><i class="icon-user"></i></div>
                                                 </div>
                                             </div>
@@ -136,6 +149,7 @@
                                             <div class="col-sm-9">
                                                 <div class="input-group">
                                                     <input type="file" name="photo" class="form-control" id="exampleInputuname_4" placeholder="Doctor Picture">
+
                                                     <div class="input-group-addon"><i class="icon-picture"></i></div>
                                                 </div>
                                             </div>
@@ -155,6 +169,9 @@
                                                     <label for="radio2">
                                                         Inactive
                                                     </label>
+                                                    @error('status')
+                                                    <div class="alert alert-danger">{{$message}}</div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>

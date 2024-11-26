@@ -96,10 +96,11 @@
                                             <td>{{$item->name}}Accountant</td>
                                             <td>{{$item->details}}</td>
                                             <td>
-                                                <a href="{{route('specialist.show',$item->id)}}" class="btn btn-danger">Show</a>
-                                                <a href="{{route('specialist.edit',$item->id)}}" class="btn btn-danger">Edit</a>
 
-                                                <form action="{{route('specialist.destroy',$item->id)}}" method="post">
+
+                                                <form action="{{route('doctor.destroy',$item->id)}}" method="post" >
+                                                <a href="{{route('doctor.show',$item->id)}}" class="btn btn-success">Show</a>
+                                                <a href="{{route('doctor.edit',$item->id)}}" class="btn btn-info">Edit</a>
                                                     @csrf
                                                     @method('delete')
 

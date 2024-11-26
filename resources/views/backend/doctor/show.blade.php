@@ -67,10 +67,25 @@
 											<div class="col-sm-12 col-xs-12">
 												<div class="form-wrap">
 
-                                                
-<h1>{{$specalist->id}}</h1>
-<h1>{{$specalist->name}}</h1>
-<h1>{{$specalist->details}}</h1>
+
+                                                <table id="example" class="table table-hover display  pb-30" >
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Doctor Name</th>
+                                                <th>Photo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <th>{{$doctor->id}}</th>
+                                                <th>{{$doctor->name}}</th>
+                                               <th><img src="{{asset($doctor->photo)}}" alt=""></th>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
 
 
 
