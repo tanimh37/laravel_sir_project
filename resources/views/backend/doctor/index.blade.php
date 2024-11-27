@@ -93,7 +93,7 @@
 
                                         <tr>
                                             <td>{{$loop->iteration}}</td>
-                                            <td>{{$item->name}}Accountant</td>
+                                            <td>{{$item->name}}</td>
                                             <td>{{$item->details}}</td>
                                             <td>
 
