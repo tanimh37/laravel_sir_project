@@ -72,7 +72,7 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Doctor Name</th>
+                                            <th>Offer Menu list</th>
                                             <th>Speciality</th>
                                             <th>Deatils</th>
                                             <th>Action</th>
@@ -82,7 +82,7 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Doctor Name</th>
+                                            <th>Offer Menu list</th>
                                             <th>Speciality</th>
                                             <th>Deatils</th>
                                             <th>Action</th>

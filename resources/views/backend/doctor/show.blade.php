@@ -72,7 +72,7 @@
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Doctor Name</th>
+                                                <th>Offer Menu List</th>
                                                 <th>Photo</th>
                                             </tr>
                                         </thead>

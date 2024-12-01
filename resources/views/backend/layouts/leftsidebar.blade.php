@@ -5,13 +5,13 @@
 
 					</li>
 					<li>
-						<a href="javascript:void(0);" data-toggle="collapse" data-target="#ecom_dr"><i class="icon-basket-loaded mr-10"></i>Specialists<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
+						<a href="javascript:void(0);" data-toggle="collapse" data-target="#ecom_dr"><i class="icon-basket-loaded mr-10"></i>Restaurent<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
 						<ul id="ecom_dr" class="collapse collapse-level-1">
 							<li>
-								<a href="{{route('specialist.index')}}">All Specialists</a>
+								<a href="{{route('specialist.index')}}">All Restaurent</a>
 							</li>
 							<li>
-								<a href="{{route('specialist.create')}}">New Specialists</a>
+								<a href="{{route('specialist.create')}}">Add New Restaurent</a>
 							</li>
 							<li>
 
@@ -19,13 +19,13 @@
 					</li>
 
                     <li>
-						<a href="javascript:void(0);" data-toggle="collapse" data-target="#dr_list"><i class="icon-basket-loaded mr-10"></i>Doctor<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
+						<a href="javascript:void(0);" data-toggle="collapse" data-target="#dr_list"><i class="icon-basket-loaded mr-10"></i>Offer<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
 						<ul id="dr_list" class="collapse collapse-level-1">
 							<li>
-								<a href="{{route('doctor.index')}}">All Doctor</a>
+								<a href="{{route('doctor.index')}}">All Offer</a>
 							</li>
 							<li>
-								<a href="{{route('doctor.create')}}">New Doctor</a>
+								<a href="{{route('doctor.create')}}">Add New Offer</a>
 							</li>
 							<li>
 

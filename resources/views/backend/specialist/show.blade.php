@@ -53,34 +53,50 @@
     <div class="row">
 
 
-						<div class="col-md-8 col-md-offset-2">
-							<div class="panel panel-default card-view">
-								<div class="panel-heading">
-									<div class="pull-left">
-										<h6 class="panel-title txt-dark">horizontal form with right icon</h6>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<div class="panel-wrapper collapse in">
-									<div class="panel-body">
-										<div class="row">
-											<div class="col-sm-12 col-xs-12">
-												<div class="form-wrap">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default card-view">
+                <div class="panel-heading">
+                    <div class="pull-left">
+                        <h6 class="panel-title txt-dark">horizontal form with right icon</h6>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-wrapper collapse in">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12">
+                                <div class="form-wrap">
 
-<h1>{{$specalist->id}}</h1>
-<h1>{{$specalist->name}}</h1>
-<h1>{{$specalist->details}}</h1>
+                                    <div class="table-responsive">
+                                        <table id="example" class="table table-hover display  pb-30">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Specialist Name</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
 
+                                                <tr>
+                                                    <th>{{$specialist->id}}</th>
+                                                    <th>{{$specialist->name}}</th>
+                                                    <th>{{$specialist->details}}</th>
 
+                                                </tr>
 
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- /Row -->
 </div>
 

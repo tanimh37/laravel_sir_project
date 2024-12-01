@@ -51,8 +51,6 @@
 
     <!-- Row -->
     <div class="row">
-
-
 						<div class="col-md-8 col-md-offset-2">
 							<div class="panel panel-default card-view">
 								<div class="panel-heading">
@@ -69,16 +67,16 @@
 													<form class="form-horizontal" method="post" action="{{route('specialist.store')}}">
                                                         @csrf
 														<div class="form-group">
-															<label for="exampleInputuname_4" class="col-sm-3 control-label">Specialist Name*</label>
+															<label for="exampleInputuname_4" class="col-sm-3 control-label">Add Restaurent Name*</label>
 															<div class="col-sm-9">
 																<div class="input-group">
-																	<input type="text" name="specialist" class="form-control" id="exampleInputuname_4" placeholder="Specialist User">
+																	<input type="text" name="specialist" class="form-control" id="exampleInputuname_4" placeholder="Enter Restaurent Name">
 																	<div class="input-group-addon"><i class="icon-user"></i></div>
 																</div>
 															</div>
 														</div>
 														<div class="form-group">
-															<label for="exampleInputEmail_4" class="col-sm-3 control-label">New Specialist*</label>
+															<label for="exampleInputEmail_4" class="col-sm-3 control-label">Restaurent Details*</label>
 															<div class="col-sm-9">
 																<div class="input-group">
 																	<textarea name="details" class="form-control" id="exampleInputEmail_4" placeholder="Enter Details"></textarea>

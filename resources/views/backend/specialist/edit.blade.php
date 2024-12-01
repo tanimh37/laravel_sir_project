@@ -70,7 +70,7 @@
                                                         @csrf
                                                         @method('PUT')
 														<div class="form-group">
-															<label for="exampleInputuname_4" class="col-sm-3 control-label">Specialist Name*</label>
+															<label for="exampleInputuname_4" class="col-sm-3 control-label">Update Restaurent Name**</label>
 															<div class="col-sm-9">
 																<div class="input-group">
 																	<input type="text" name="specialist" value="{{$specialist->name}}" class="form-control" id="exampleInputuname_4" placeholder="Specialist User">
@@ -79,7 +79,7 @@
 															</div>
 														</div>
 														<div class="form-group">
-															<label for="exampleInputEmail_4" class="col-sm-3 control-label">New Specialist*</label>
+															<label for="exampleInputEmail_4" class="col-sm-3 control-label">Update Details*</label>
 															<div class="col-sm-9">
 																<div class="input-group">
 																	<textarea name="details" class="form-control" id="exampleInputEmail_4" placeholder="Enter Details">{{$specialist->details}}</textarea>

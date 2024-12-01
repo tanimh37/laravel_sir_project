@@ -30,7 +30,11 @@ class SpecialistController extends Controller
      */
     public function store(Request $request)
     {
-
+        $specialist = new Specialist;
+        $specialist->Name = $request->specialist;
+        $specialist->details = $request->details;
+        $specialist->save();
+        return redirect()->route('specialist.index')->with('msg','Succesfully created');
     }
 
     /**

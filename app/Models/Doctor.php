@@ -53,6 +53,10 @@ class Doctor extends Authenticatable
     public function specialist(){
         return $this-> BelongsTo(Specialist::class);
     }
+
+    public function appointment(){
+        return $this->hasMany(Appointment::class);
+    }
 }
 
 

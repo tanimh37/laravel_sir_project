@@ -69,10 +69,10 @@
                                     <form class="form-horizontal" method="post" action="{{route('doctor.store')}}" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
-                                            <label for="exampleInputuname_4" class="col-sm-3 control-label">Doctor Name*</label>
+                                            <label for="exampleInputuname_4" class="col-sm-3 control-label">Food Name*</label>
                                             <div class="col-sm-9">
                                                 <div class="input-group">
-                                                    <input type="text" name="name" value="{{old('name')}}" class="form-control" id="exampleInputuname_4" placeholder="Specialist User">
+                                                    <input type="text" name="name" value="{{old('name')}}" class="form-control" id="exampleInputuname_4" placeholder="Enter offer menu">
                                                     @error('name')
                                                     <div class="alert alert-danger">{{$message}}</div>
                                                     @enderror
@@ -81,7 +81,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="exampleInputuname_4" class="col-sm-3 control-label">Specialist*</label>
+                                            <label for="exampleInputuname_4" class="col-sm-3 control-label">Restaurent Name*</label>
                                             <div class="col-sm-9">
 
                                                 <select name="specialist" id="">
@@ -102,7 +102,7 @@
 
 
                                         <div class="form-group">
-                                            <label for="exampleInputuname_4" class="col-sm-3 control-label">Email*</label>
+                                            <label for="exampleInputuname_4" class="col-sm-3 control-label">Restaurent Email*</label>
                                             <div class="col-sm-9">
                                                 <div class="input-group">
                                                     <input type="text" name="email" value="{{old('email')}}" class="form-control" id="exampleInputuname_4" placeholder="Doctor Email">
@@ -115,7 +115,7 @@
                                         </div>
 
 
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="exampleInputuname_4" class="col-sm-3 control-label">Password*</label>
                                             <div class="col-sm-9">
                                                 <div class="input-group">
@@ -141,7 +141,7 @@
                                                     <div class="input-group-addon"><i class="icon-user"></i></div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
 
 
                                         <div class="form-group">
