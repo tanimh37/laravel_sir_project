@@ -18,7 +18,7 @@
            @endif
                <b>OUR Booking Now</b>
                <h4 class="rr-section-title pb-60">Appoinment</h4>
-               <form method="post" action="{{route('appointment.store')}}">
+               <form method="post" action="{{route('front_app.store')}}">
                   @csrf
                   <div class="row">
                      <div class="col-xl-6 col-lg-6 col-md-6 mb-20">

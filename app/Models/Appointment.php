@@ -17,7 +17,7 @@ class Appointment extends Model
         'remarks'
     ];
 
-    public function specialist(){
+    public function doctor(){
         return $this->belongsTo(Doctor::class);
     }
 

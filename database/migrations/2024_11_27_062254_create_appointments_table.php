@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('doctor_id',50);
             $table->date('date');
             $table->string('remarks',50);
+            $table->enum('status',['pendding','confirmed'])->default('pendding');
             $table->timestamps();
         });
     }

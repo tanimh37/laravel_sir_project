@@ -19,8 +19,8 @@
 					</li>
 
                     <li>
-						<a href="javascript:void(0);" data-toggle="collapse" data-target="#dr_list"><i class="icon-basket-loaded mr-10"></i>Offer<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
-						<ul id="dr_list" class="collapse collapse-level-1">
+						<a href="javascript:void(0);" data-toggle="collapse" data-target="#fr_list"><i class="icon-basket-loaded mr-10"></i>Offer<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
+						<ul id="fr_list" class="collapse collapse-level-1">
 							<li>
 								<a href="{{route('doctor.index')}}">All Offer</a>
 							</li>
@@ -31,6 +31,35 @@
 
 						</ul>
 					</li>
+
+                    <li>
+						<a href="javascript:void(0);" data-toggle="collapse" data-target="#fra_list"><i class="icon-basket-loaded mr-10"></i>Appointment<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
+						<ul id="fra_list" class="collapse collapse-level-1">
+							<li>
+								<a href="{{route('appointment.index')}}">All Appointment</a>
+							</li>
+
+							<li>
+								<a href="{{route('appointment.create')}}">New Appointment</a>
+							</li>
+
+						</ul>
+					</li>
+
+                    <li>
+						<a href="javascript:void(0);" data-toggle="collapse" data-target="#fran_list"><i class="icon-basket-loaded mr-10"></i>Departments<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
+						<ul id="fran_list" class="collapse collapse-level-1">
+							<li>
+								<a href="{{route('department.index')}}">All Department</a>
+							</li>
+
+							<li>
+								<a href="{{route('department.create')}}">All Department</a>
+							</li>
+
+						</ul>
+					</li>
+
 
 				</ul>
 			</div>
