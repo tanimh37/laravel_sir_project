@@ -25,6 +25,29 @@
 <script src="{{asset('dist/js/dropdown-bootstrap-extended.js')}}"></script>
 <script src="{{asset('dist/js/init.js')}}"></script>
 
+<script>
+    $(document).ready(function() {
+        $('#btnAdd').click(function() {
+            e.preventDefault
+            alert("YOU HAVE CLICKED");
+            let mydata = $("#deptForm").serialize();
+
+
+            $.ajax({
+                url: "{{route('department.store')}}",
+                type: "POST",
+                data: (
+                    "_token":"{{csrf_token()}}",
+                    "data":mydata
+                ),
+                success: function(result) {
+                    $("#div1").html(result);
+                }
+            });
+        });
+    })
+</script>
+
 @endsection
 
 
@@ -121,32 +144,32 @@
 </div>
 
 
-										<!-- /.modal -->
-										<div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-											<div class="modal-dialog">
-												<div class="modal-content">
-													<div class="modal-header">
-														<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-														<h5 class="modal-title">Clint memo</h5>
-													</div>
-													<div class="modal-body">
-														<form>
-															<div class="form-group">
-																<label for="recipient-name" class="control-label mb-10">Recipient:</label>
-																<input type="text" class="form-control" id="recipient-name">
-															</div>
-															<div class="form-group">
-																<label for="message-text" class="control-label mb-10">Message:</label>
-																<textarea class="form-control" id="message-text"></textarea>
-															</div>
-														</form>
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-														<button type="button" class="btn btn-danger">Save changes</button>
-													</div>
-												</div>
-											</div>
-										</div>
+<!-- /.modal -->
+<div id="responsive-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h5 class="modal-title">Clint memo</h5>
+            </div>
+            <div class="modal-body">
+                <form id="deptForm">
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label mb-10">Department Name:</label>
+                        <input type="text" class="form-control" id="recipient-name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label mb-10">Details:</label>
+                        <textarea class="form-control" id="message-text" name="details"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" id="btnAdd" class="btn btn-danger">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 @endsection
